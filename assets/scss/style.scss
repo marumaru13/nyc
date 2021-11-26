@@ -61,10 +61,21 @@ h2{
   padding-top: 40px;
 }
 
-.contents img{
-  width: auto;
-  height: 300px;
-  margin: 0 20px;
+h3{
+  font-size: 25px;
+  margin: 0 auto;
+  // position: relative;
+  padding: 0.25em 0;
+  &:after{
+  content: "";
+  display: block;
+  height: 7px;
+  background: -webkit-linear-gradient(to right, hsl(323, 100%, 73%), #b2ffb8);
+  background: linear-gradient(to right, rgb(216, 127, 38), #5baade);
+  width: 20cm;
+  margin: 0 auto;
+
+  }
 }
 
 .contents{
@@ -73,6 +84,11 @@ h2{
   align-items: center;
   width: 1200px;
   margin: 20px auto;
+  img{
+    width: auto;
+    height: 300px;
+    margin: 0 20px;
+  }
 }
 
 .description{
@@ -110,7 +126,7 @@ footer{
       flex-direction: column-reverse;
     }
   
-    .English .contents{
+    .section2 .contents{
       flex-direction: column-reverse;
     }
   
@@ -123,6 +139,7 @@ footer{
       display: none;
     }
   } 
+
   .hamburger{
     width: 30px;
     height: 30px;
@@ -138,21 +155,18 @@ footer{
     .pate{
       position: relative;
       top: calc(50% - 2px);
-    }
-  
-    .pate::before{
-      content: '';
-      position: absolute;
-      top: -9px;
-
-    }
-    .pate::after{
-      content: '';
-      position: absolute;
-      top: 9px;
- 
- }
-}
+        &::before{
+         content: '';
+         position: absolute;
+         top: -9px;
+        }
+        &::after{
+         content: '';
+         position: absolute;
+         top: 9px;
+        }
+       }
+     }
 
 #wrap{
   &:checked{
