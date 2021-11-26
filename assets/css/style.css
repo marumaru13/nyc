@@ -5,6 +5,7 @@ header {
   align-items: center;
   background-color: #062742;
   padding: 14px 40px;
+  width: 100%;
 }
 
 .logo {
@@ -15,7 +16,9 @@ header {
 .header-left span {
   color: white;
   margin-left: 22px;
-  font-size: 20px;
+  font-size: 30px;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Merriweather', serif;
 }
 
 .header-right > ul {
@@ -107,6 +110,10 @@ footer {
 
 #wrap {
   display: none;
+}
+
+.card-img-top {
+  width: 300px;
 }
 
 @media screen and (max-width: 780px) {
