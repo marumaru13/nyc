@@ -5,7 +5,7 @@ header{
   background-color: rgb(6,39,66);
   padding: 14px 40px;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 .logo{
@@ -35,17 +35,32 @@ a {
   margin-left: 20px;
 }
 
-.welcome{
-  height: 800px;
-  background-image: url('../img/nyctop.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: white;
+.wrap{
+  padding: 150px;
 }
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img{
+  animation: zoomUp 10s linear 0s 1 normal both;  
+}
+.slide-img img{
+  display: block;
+  // width: 1000px;
+  height: 500px;
+}
+.swiper-wrapper{
+  width: 1000px ;
+}
+
 
 .title{
   font-size: 60px;
@@ -86,7 +101,7 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1200px;
+  width: 1000px;
   margin: 20px auto;
   img{
     width: auto;
@@ -110,6 +125,54 @@ h3{
     }
   }
 }
+
+.contents2{
+  display: flex;
+}
+.box2{
+  width: 350px;
+  height: 500px;
+  position: relative;
+  img{
+    width: 350px;
+    height: auto;
+  }
+  
+}
+.box2:hover{
+  box-shadow: 8px 8px 8px 8px rgba(43, 42, 42, 0.5);
+  transition-duration: 2.0s;
+}
+
+.dates,.text{
+  font-size: 30px;
+  margin-top: 15px;
+}
+.btn_box{
+  display: inline-block;
+  position: absolute;
+  top: 450px; right: 25px;
+  height: 40px;  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;     
+}
+
+.box2:hover {
+  box-shadow: 8px 8px 8px 8px rgba(43, 42, 42, 0.5);
+  transition-duration: 2.0s;
+}
+.btn_box span{
+  width: 100%;
+  transition: 1.5s;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  border-bottom: solid 2px black;
+}
+  
+
+
 
 .description{
   width: 50%;
